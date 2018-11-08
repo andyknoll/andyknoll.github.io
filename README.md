@@ -7,5 +7,5 @@
 [Rocco](rocco)
 
 ## Quick Picker Game
-[Quick-Picker](quick-picker)
+[Quick Picker](quick-picker)
 
