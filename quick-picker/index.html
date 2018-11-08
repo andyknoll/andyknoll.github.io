@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- 
+
+	index.html 
+	Andy Knoll
+	November 2018
+	
+-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<title>Quick Picker 6</title>
+	
+	<!-- app-specific CSS -->
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/qp.views.css" rel="stylesheet">
+
+
+	<!-- custom web fonts -->
+	<link  href="fonts/Paprika.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="app-wrapper no-select">
+
+        <header>
+            Quick Picker 6
+        </header>
+
+        <div class="game-wrapper">
+            <div class="row">
+                <div id="scoreboard" class="scoreboard wide-column">
+                    <div id="current-level">
+                        <div id="current-level-display">Level 1</div>
+                        <button id="button-level-1" class="level-button">1</button>
+                        <button id="button-level-2" class="level-button">2</button>
+                        <button id="button-level-3" class="level-button">3</button>
+                        <button id="button-level-4" class="level-button">4</button>
+                    </div>
+                    <div id="current-pick">
+                        <div id="current-pick-display">?</div>
+                    </div>
+                    <button id="button-play">
+                        <div id="button-play-label">PLAY</div>
+                    </button>
+                    <div id="my-progress-bar"></div>
+                </div>
+                
+                <div id="gameboard" class="gameboard wide-column">
+                    <!-- inject with HTML from the View's level objects -->
+                </div>
+            </div>            
+
+            <div class="overlay">
+                <button id="button-ok">
+                    <div id="button-ok-label">OK</div>
+                </button>
+                <div id="html-1" class="overlay-html">
+                    <p>Welcome to Quick Picker!</p>
+                </div>
+                <div id="html-2" class="overlay-html">
+                    <p>See how fast you can pick the random numbers before your time runs out!</p>
+                </div>
+                <div id="html-3" class="overlay-html">
+                    <p>Beat the timer and advance to all four levels - good luck!</p>
+                </div>
+            </div>
+
+        </div>  <!-- game wrapper -->
+
+        <footer>
+            &copy; 2018 Andy Knoll
+        </footer>
+
+    </div>
+    
+    <!-- vendor libraries -->
+	<script src="js/vendor/jquery-3.3.1.min.js"></script>
+	
+    <!-- Andy's custom objects and UI components -->
+	<script src="js/custom/timer-object.js"></script>
+	<script src="js/custom/progress-bar.js"></script>
+	
+	<!-- app-specific JS code -->
+	<script src="js/qp.app.js"></script>
+	<script src="js/qp.models.js"></script>
+	<script src="js/qp.views.js"></script>
+    <script src="js/qp.controllers.js"></script>
+    <script src="js/qp.audio.js"></script>
+    <script src="js/qp.tester.js"></script>
+    
+	<!-- create the app object and run the game! -->
+	<script>
+        var app = new qp.App();
+        app.run();
+    </script>
+
+</body>
+
+</html>
+
