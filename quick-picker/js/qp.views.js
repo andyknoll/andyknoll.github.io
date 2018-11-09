@@ -304,145 +304,140 @@ qp.LevelViews = function(name, parent) {
         var html = "";
 
         // 3x3 grid - correct id values are critical
-        html = `
-            <div class="row h-33">
-                <div class="column"><div class="block" id="p0"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p1"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p2"><div class="label"></div></div></div>
-            </div>
-            <div class="row h-33">
-                <div class="column"><div class="block" id="p3"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p4"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p5"><div class="label"></div></div></div>
-            </div>
-            <div class="row h-33">
-                <div class="column"><div class="block" id="p6"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p7"><div class="label"></div></div></div>
-                <div class="column"><div class="block" id="p8"><div class="label"></div></div></div>
-            </div>    
-        `;
+        html = "";
+        html += "<div class='row h-33'>";
+        html += "    <div class='column'><div class='block' id='p0'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p1'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p2'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-33'>";
+        html += "    <div class='column'><div class='block' id='p3'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p4'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p5'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-33'>";
+        html += "    <div class='column'><div class='block' id='p6'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p7'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p8'><div class='label'></div></div></div>";
+        html += "</div>";
         this._views.push(html);
 
-        // 4x4 grid - correct id values are critical
-        html = `
-            <div class="row h-25">
-                <div class="column"><div class="block" id="p0"><div class="label">1</div></div></div>
-                <div class="column"><div class="block" id="p1"><div class="label">2</div></div></div>
-                <div class="column"><div class="block" id="p2"><div class="label">3</div></div></div>
-                <div class="column"><div class="block" id="p3"><div class="label">4</div></div></div>
-            </div>
-            <div class="row h-25">
-                <div class="column"><div class="block" id="p4"><div class="label">5</div></div></div>
-                <div class="column"><div class="block" id="p5"><div class="label">6</div></div></div>
-                <div class="column"><div class="block" id="p6"><div class="label">7</div></div></div>
-                <div class="column"><div class="block" id="p7"><div class="label">8</div></div></div>
-            </div>
-            <div class="row h-25">
-                <div class="column"><div class="block" id="p8"><div class="label">9</div></div></div>
-                <div class="column"><div class="block" id="p9"><div class="label">10</div></div></div>
-                <div class="column"><div class="block" id="p10"><div class="label">11</div></div></div>
-                <div class="column"><div class="block" id="p11"><div class="label">12</div></div></div>
-            </div>
-            <div class="row h-25">
-                <div class="column"><div class="block" id="p12"><div class="label">13</div></div></div>
-                <div class="column"><div class="block" id="p13"><div class="label">14</div></div></div>
-                <div class="column"><div class="block" id="p14"><div class="label">15</div></div></div>
-                <div class="column"><div class="block" id="p15"><div class="label">16</div></div></div>
-            </div>
-        `;
+        html = "";
+        html += "<div class='row h-25'>";
+        html += "    <div class='column'><div class='block' id='p0'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p1'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p2'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p3'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-25'>";
+        html += "    <div class='column'><div class='block' id='p4'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p5'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p6'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p7'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-25'>";
+        html += "    <div class='column'><div class='block' id='p8'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p9'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p10'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p11'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-25'>";
+        html += "    <div class='column'><div class='block' id='p12'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p13'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p14'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p15'><div class='label'></div></div></div>";
+        html += "</div>";
         this._views.push(html);
 
         // 5x5 grid - correct id values are critical
-        html = `
-            <div class="row h-20">
-                <div class="column"><div class="block" id="p0"><div class="label">1</div></div></div>
-                <div class="column"><div class="block" id="p1"><div class="label">2</div></div></div>
-                <div class="column"><div class="block" id="p2"><div class="label">3</div></div></div>
-                <div class="column"><div class="block" id="p3"><div class="label">4</div></div></div>
-                <div class="column"><div class="block" id="p4"><div class="label">5</div></div></div>
-            </div>
-            <div class="row h-20">
-                <div class="column"><div class="block" id="p5"><div class="label">6</div></div></div>
-                <div class="column"><div class="block" id="p6"><div class="label">7</div></div></div>
-                <div class="column"><div class="block" id="p7"><div class="label">8</div></div></div>
-                <div class="column"><div class="block" id="p8"><div class="label">9</div></div></div>
-                <div class="column"><div class="block" id="p9"><div class="label">10</div></div></div>
-            </div>
-            <div class="row h-20">
-                <div class="column"><div class="block" id="p10"><div class="label">11</div></div></div>
-                <div class="column"><div class="block" id="p11"><div class="label">12</div></div></div>
-                <div class="column"><div class="block" id="p12"><div class="label">13</div></div></div>
-                <div class="column"><div class="block" id="p13"><div class="label">14</div></div></div>
-                <div class="column"><div class="block" id="p14"><div class="label">15</div></div></div>
-            </div>
-            <div class="row h-20">
-                <div class="column"><div class="block" id="p15"><div class="label">16</div></div></div>
-                <div class="column"><div class="block" id="p16"><div class="label">17</div></div></div>
-                <div class="column"><div class="block" id="p17"><div class="label">18</div></div></div>
-                <div class="column"><div class="block" id="p18"><div class="label">19</div></div></div>
-                <div class="column"><div class="block" id="p19"><div class="label">20</div></div></div>
-            </div>    
-            <div class="row h-20">
-                <div class="column"><div class="block" id="p20"><div class="label">21</div></div></div>
-                <div class="column"><div class="block" id="p21"><div class="label">22</div></div></div>
-                <div class="column"><div class="block" id="p22"><div class="label">23</div></div></div>
-                <div class="column"><div class="block" id="p23"><div class="label">24</div></div></div>
-                <div class="column"><div class="block" id="p24"><div class="label">25</div></div></div>
-            </div>
-        `;
+        html = "";
+        html += "<div class='row h-20'>";
+        html += "    <div class='column'><div class='block' id='p0'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p1'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p2'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p3'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p4'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-20'>";
+        html += "    <div class='column'><div class='block' id='p5'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p6'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p7'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p8'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p9'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-20'>";
+        html += "    <div class='column'><div class='block' id='p10'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p11'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p12'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p13'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p14'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-20'>";
+        html += "    <div class='column'><div class='block' id='p15'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p16'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p17'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p18'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p19'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-20'>";
+        html += "    <div class='column'><div class='block' id='p20'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p21'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p22'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p23'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p24'><div class='label'></div></div></div>";
+        html += "</div>";
         this._views.push(html);
 
         // 6x6 grid - correct id values are critical
-        html = `
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p0"><div class="label">1</div></div></div>
-                <div class="column"><div class="block" id="p1"><div class="label">2</div></div></div>
-                <div class="column"><div class="block" id="p2"><div class="label">3</div></div></div>
-                <div class="column"><div class="block" id="p3"><div class="label">4</div></div></div>
-                <div class="column"><div class="block" id="p4"><div class="label">5</div></div></div>
-                <div class="column"><div class="block" id="p5"><div class="label">6</div></div></div>
-            </div>
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p6"><div class="label">7</div></div></div>
-                <div class="column"><div class="block" id="p7"><div class="label">8</div></div></div>
-                <div class="column"><div class="block" id="p8"><div class="label">9</div></div></div>
-                <div class="column"><div class="block" id="p9"><div class="label">10</div></div></div>
-                <div class="column"><div class="block" id="p10"><div class="label">11</div></div></div>
-                <div class="column"><div class="block" id="p11"><div class="label">12</div></div></div>
-            </div>
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p12"><div class="label">13</div></div></div>
-                <div class="column"><div class="block" id="p13"><div class="label">14</div></div></div>
-                <div class="column"><div class="block" id="p14"><div class="label">15</div></div></div>
-                <div class="column"><div class="block" id="p15"><div class="label">16</div></div></div>
-                <div class="column"><div class="block" id="p16"><div class="label">17</div></div></div>
-                <div class="column"><div class="block" id="p17"><div class="label">18</div></div></div>
-            </div>
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p18"><div class="label">19</div></div></div>
-                <div class="column"><div class="block" id="p19"><div class="label">20</div></div></div>
-                <div class="column"><div class="block" id="p20"><div class="label">21</div></div></div>
-                <div class="column"><div class="block" id="p21"><div class="label">22</div></div></div>
-                <div class="column"><div class="block" id="p22"><div class="label">23</div></div></div>
-                <div class="column"><div class="block" id="p23"><div class="label">24</div></div></div>
-            </div>
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p24"><div class="label">25</div></div></div>
-                <div class="column"><div class="block" id="p25"><div class="label">26</div></div></div>
-                <div class="column"><div class="block" id="p26"><div class="label">27</div></div></div>
-                <div class="column"><div class="block" id="p27"><div class="label">28</div></div></div>
-                <div class="column"><div class="block" id="p28"><div class="label">29</div></div></div>
-                <div class="column"><div class="block" id="p29"><div class="label">30</div></div></div>
-            </div>
-            <div class="row h-16">
-                <div class="column"><div class="block" id="p30"><div class="label">31</div></div></div>
-                <div class="column"><div class="block" id="p31"><div class="label">32</div></div></div>
-                <div class="column"><div class="block" id="p32"><div class="label">33</div></div></div>
-                <div class="column"><div class="block" id="p33"><div class="label">34</div></div></div>
-                <div class="column"><div class="block" id="p34"><div class="label">35</div></div></div>
-                <div class="column"><div class="block" id="p35"><div class="label">36</div></div></div>
-            </div>
-        `;
+        html = "";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p0'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p1'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p2'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p3'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p4'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p5'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p6'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p7'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p8'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p9'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p10'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p11'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p12'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p13'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p14'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p15'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p16'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p17'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p18'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p19'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p20'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p21'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p22'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p23'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p24'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p25'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p26'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p27'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p28'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p29'><div class='label'></div></div></div>";
+        html += "</div>";
+        html += "<div class='row h-16'>";
+        html += "    <div class='column'><div class='block' id='p30'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p31'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p32'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p33'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p34'><div class='label'></div></div></div>";
+        html += "    <div class='column'><div class='block' id='p35'><div class='label'></div></div></div>";
+        html += "</div>";
         this._views.push(html);
     };
 
