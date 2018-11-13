@@ -81,7 +81,7 @@ qp.GameCtrl = function(name, parent) {
             data = {};              // need a unique new object to pass each time
             data.piece = piece;
             data.ctrl = this;
-            piece.$elem.on("click", data, this.$pieces_click);
+            piece.$elem.on("mousedown", data, this.$pieces_click);
         }
     };
 
