@@ -303,6 +303,8 @@ qp.LevelViews = function(name, parent) {
         qp.debug("LevelViews.createLevelsHtml");
         var html = "";
 
+        // cannot use backticks for strings - thanks IE!
+        
         // 3x3 grid - correct id values are critical
         html = "";
         html += "<div class='row h-33'>";
