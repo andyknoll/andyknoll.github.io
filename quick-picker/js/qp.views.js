@@ -218,15 +218,20 @@ qp.GameView = function(name, parent) {
     // use the overlay screen here
     this.showWinner = function() {
         qp.debug("GameView.showWinner");
-        alert("WINNER!");
+        alert("CONGRATULATIONS! YOU ARE A WINNER!");
+        // TO DO
+        // show stats - pieces, time remaining
         // advance to next level
     };
 
-    this.soundWinner = function() {
+    this.showLoser = function() {
+        qp.debug("GameView.showWinner");
+        alert("SORRY - YOU DID NOT COMPLETE THE GAME.");
         // TO DO
+        // show stats - pieces, time remaining
     };
 
-    this.showLoser = function() {
+    this.soundWinner = function() {
         // TO DO
     };
 

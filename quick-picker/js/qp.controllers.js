@@ -129,7 +129,8 @@ qp.GameCtrl = function(name, parent) {
 
         var game = this.game;
         game.decrTimeRemaining();
-        //alert(game.timeRemaining);
+        this.view.animProgressBarValue(game.timeRemaining, 1000);
+        
         if (game.timeRemaining == 0) {
             game.stopGame();
             this.view.showLoser();
@@ -137,7 +138,6 @@ qp.GameCtrl = function(name, parent) {
             this.view.initProgressBar(0);
         };
 
-        this.view.animProgressBarValue(game.timeRemaining, 1000);
     };
 
 
@@ -217,11 +217,11 @@ qp.GameCtrl = function(name, parent) {
         // the correct piece was selected
         currPiece.showCorrect();
         currPiece.soundCorrect();
-        game.incrNumCorrect();
+        game.incrNumCorrect();      // NO! this should be done in the game object
 
         // a winner will stop the game and timer
         if (!this.checkForWinner()) {
-            game.getNextPick();
+            game.getNextPick();      // NO! this should be done in the game object
             view.showCurrPick(game.currPick());
         } else {
             // game is over with a winner!
