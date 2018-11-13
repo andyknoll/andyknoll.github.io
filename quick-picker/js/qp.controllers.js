@@ -130,12 +130,14 @@ qp.GameCtrl = function(name, parent) {
         var game = this.game;
         game.decrTimeRemaining();
         //alert(game.timeRemaining);
-
-        this.view.animProgressBarValue(game.timeRemaining, 1000);
         if (game.timeRemaining == 0) {
             game.stopGame();
+            this.view.showLoser();
+            this.view.soundLoser();
             this.view.initProgressBar(0);
         };
+
+        this.view.animProgressBarValue(game.timeRemaining, 1000);
     };
 
 
@@ -208,17 +210,21 @@ qp.GameCtrl = function(name, parent) {
 
         if (!game.currGuessIsCorrect()) {
             currPiece.showIncorrect();
+            currPiece.soundIncorrect()
             return;
         }
 
         // the correct piece was selected
         currPiece.showCorrect();
+        currPiece.soundCorrect();
         game.incrNumCorrect();
 
         // a winner will stop the game and timer
         if (!this.checkForWinner()) {
             game.getNextPick();
             view.showCurrPick(game.currPick());
+        } else {
+            // game is over with a winner!
         }
     };
 
@@ -226,6 +232,7 @@ qp.GameCtrl = function(name, parent) {
         if (this.game.isWinner()) {
             this.stopGame();
             this.view.showWinner();
+            this.view.soundWinner();
             return true;
         } else {
             return false;

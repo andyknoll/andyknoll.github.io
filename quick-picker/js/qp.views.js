@@ -222,6 +222,18 @@ qp.GameView = function(name, parent) {
         // advance to next level
     };
 
+    this.soundWinner = function() {
+        // TO DO
+    };
+
+    this.showLoser = function() {
+        // TO DO
+    };
+
+    this.soundLoser = function() {
+        // TO DO
+    };
+
     this.createChildObjects();
 };
 
@@ -276,6 +288,14 @@ qp.GamePiece = function(name, parent) {
         this.$elem.css("visibility", "visible");
     };
     
+    this.soundCorrect = function() {
+        // TO DO
+    };
+
+    this.soundIncorrect = function() {
+        // TO DO
+    };
+
 
 };
 
@@ -304,7 +324,7 @@ qp.LevelViews = function(name, parent) {
         var html = "";
 
         // cannot use backticks for strings - thanks IE!
-        
+
         // 3x3 grid - correct id values are critical
         html = "";
         html += "<div class='row h-33'>";
