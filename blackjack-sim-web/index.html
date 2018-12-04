@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- 
+
+	index.html 
+	Andy Knoll
+	November 2018
+
+	github.io version
+	
+-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<title>Blackjack 1984</title>
+	
+	<!-- app-specific CSS -->
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/app-web.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Blackjack 1984</h1>
+        <h2>A console-based game simulator.</h2>
+        <div id="lisa">
+            <div id="console">
+                <pre id="display"></pre>
+            </div>
+
+            <!-- computer chassis buttons -->
+            <button id="button1" class="button-b">WELCOME SCREEN</button>
+            <button id="button2" class="button-b">INSTRUCTIONS</button>
+            <button id="button3" class="button-b">PLAY 1 ROUND</button>
+            <button id="button4" class="button-b">PLAY 20 ROUNDS</button>
+        </div>
+    </div>
+
+    <!-- vendor libraries -->
+    <script src="js/lib/jquery-3.3.1.min.js"></script>
+    <script src="js/lib/ak-objects.js"></script>
+    
+
+	<!-- app-specific JS code -->
+	<script src="js/app/app-models.js"></script>
+	<script src="js/app/app-views.js"></script>
+    <script src="js/app/app-ctrls.js"></script>
+    
+	<script src="js/game/bj-game.js"></script>
+	<script src="js/game/bj-view.js"></script>
+    <script src="js/game/bj-controller.js"></script>
+    
+	<script src="js/game/bj-card.js"></script>
+	<script src="js/game/bj-deck.js"></script>
+	<script src="js/game/bj-multideck.js"></script>
+	<script src="js/game/bj-player.js"></script>
+	<script src="js/game/bj-players.js"></script>
+	<script src="js/game/bj-dealer.js"></script>
+	<script src="js/game/bj-hand.js"></script>
+    <script src="js/game/bj-rules.js"></script>
+    
+	<script src="js/app/app.js"></script>
+
+</body>
+
+</html>
+

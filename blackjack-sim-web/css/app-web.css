@@ -1,0 +1,238 @@
+/* app-web.css */
+
+#app {
+	position: relative;
+	margin: auto;
+	width: 1200px;
+	border: 0px solid black;
+}
+
+html {
+	font-family: "Arial";
+	font-size: 16px;
+}
+
+body {
+	color: black;
+	background-color: #eeeeee;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 2em;
+	text-align: center;
+	padding: 10px;
+}
+
+
+.button-a {
+	width: 200px;
+	height: 40px;
+}
+
+.button-b {
+	position: absolute;
+	width: 172px;
+	height: 34px;
+	color: black;
+	font-size: 14px;
+	background: rgba(0, 0, 0, .1);
+	border: 0px;
+	text-shadow: 1px 1px 1px wheat;
+}
+
+.button-b:hover {
+	color: black;
+	background: rgba(0, 0, 0, .0);
+}
+
+
+
+
+
+#lisa {
+	position: relative;
+	width: 1200px;
+	height: 600px;
+	background-image: url("../img/lisa4-ak-1200x600.png");
+}
+
+
+#console {
+	position: absolute;
+	top: 120px;
+	left: 120px;
+	height: 370px;
+	width: 580px;
+	font-family: Courier, monospace;
+	font-size: 16px;
+	font-weight: bold;
+	/*color: #00dd00;*/
+	color: #dd9700;
+	overflow: hidden;
+	border: 0px solid white;
+}
+
+#button1 {
+	top: 337px;
+	left: 755px;
+}
+
+#button2 {
+	top: 337px;
+	left: 974px;
+}
+
+#button3 {
+	top: 406px;
+	left: 755px;
+}
+
+#button4 {
+	top: 406px;
+	left: 974px;
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* small */
+@media only screen and (max-width: 600px) {
+
+	/* Mac */
+	
+	#app {
+		position: relative;
+		margin: auto;
+		width: 360px;
+		border: 0px solid black;
+	}
+	
+	body {
+		background-color: #ffffff;
+	}
+	
+	h1 {
+		font-size: 1em;
+	}
+		
+	h2 {
+		font-size: .75em;
+	}
+			
+	.button-b {
+		width: 123px;
+		height: 25px;
+		font-size: 8px;
+	}
+	
+	#button1 {
+		top: 290px;
+		left: 53px;
+	}
+	
+	#button2 {
+		top: 290px;
+		left: 183px;
+	}
+	
+	#button3 {
+		top: 320px;
+		left: 53px;
+	}
+	
+	#button4 {
+		top: 320px;
+		left: 183px;
+	}
+	
+	#console {
+		top: 80px;
+		left: 50px;
+		height: 160px;
+		width: 260px;
+		font-size: 7px;
+		color: #eeeeee;
+		border: 0px solid white;
+	}
+	
+	#lisa {
+		position: relative;
+		width: 360px;
+		height: 472px;
+		background-image: url("../img/mac-ak3-360x472.jpg");
+	}
+		
+}
+
+/* medium */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+
+	/* Mac */
+	
+	#app {
+		width: 720px;
+	}
+	
+	body {
+		background-color: #ffffff;
+	}
+	
+	h1 {
+		font-size: 2em;
+	}
+		
+	h2 {
+		font-size: 1em;
+	}
+			
+	#button1 {
+		top: 588px;
+		left: 115px;
+	}
+	
+	#button2 {
+		top: 588px;
+		left: 375px;
+	}
+	
+	#button3 {
+		top: 648px;
+		left: 115px;
+	}
+	
+	#button4 {
+		top: 648px;
+		left: 375px;
+	}
+	
+	.button-b {
+		width: 234px;
+		height: 34px;
+	}
+	
+	#console {
+		top: 150px;
+		left: 90px;
+		height: 350px;
+		width: 545px;
+		font-size: 15px;
+		color: #00dd00;
+		border: 0px solid white;
+	}
+	
+	#lisa {
+		position: relative;
+		width: 720px;
+		height: 920px;
+		background-image: url("../img/mac-ak3-720x944.jpg");
+	}
+		
+}
+
