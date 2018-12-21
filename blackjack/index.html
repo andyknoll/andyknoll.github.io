@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- 
+
+	index.html 
+	Andy Knoll
+	December 2018
+
+	Blackjack game for MCC Front End Developer Certification course.
+	
+-->
+
+<head>
+
+	<title>Blackjack Demo</title>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Blackjack Game">
+    <meta name="author" content="Andy Knoll">
+	
+	<!-- app-specific CSS and web fonts -->
+	<link href="css/bj.app.css" rel="stylesheet">
+	<link href="css/bj.game-comps.css" rel="stylesheet">
+	<link href="css/bj.screen-comps.css" rel="stylesheet">
+	<link href="css/bj.scoreboard-comps.css" rel="stylesheet">
+
+	<link href="assets/fonts/Lato.css"    rel="stylesheet">
+	<link href="assets/fonts/Paprika.css" rel="stylesheet">
+	<link href="assets/fonts/Nunito.css"  rel="stylesheet">
+
+
+	<!-- vendor libraries -->
+	<script src="js/libs/vendor/jquery-3.3.1.min.js"></script>
+	<script src="js/libs/vendor/TweenLitePlus.min.js"></script>
+
+	<!-- WOOD libraries - using local dist folder -->
+	<!-- <script src="js/libs/wood/core/wood.min.js"></script> -->
+	<script src="js/libs/wood/core/wood.core.js"></script>
+	<script src="js/libs/wood/core/wood.mvc.js"></script>
+	<script src="js/libs/wood/core/wood.comps.js"></script>
+	<script src="js/libs/wood/core/wood.ui-comps.js"></script>
+	<script src="js/libs/wood/core/wood.vfx-comps.js"></script>
+
+	<!-- Card Loader files -->
+	<script src="js/libs/wood/loaders/wood.image-loader.js"></script>
+	<script src="js/libs/wood/loaders/wood.comp-loader.js"></script>
+	<script src="js/libs/wood/loaders/wood.card-loader.js"></script>
+
+
+	<!-- app-specific JS code and assets -->
+	<script src="js/app/bj.app.js"></script>
+	<!--
+	<script src="assets/audio/bj.audio.js"></script>
+	<script src="assets/card-maker/card-maker.js"></script>
+	-->
+
+	<!-- <script src="js/app/models/bj.models.min.js"></script> -->
+	<script src="js/app/models/bj.game.js"></script>
+	<script src="js/app/models/bj.players.js"></script>
+	<script src="js/app/models/bj.decks.js"></script>
+	<script src="js/app/models/bj.chips.js"></script>
+	<script src="js/app/models/bj.hand.js"></script>
+	
+	<!-- <script src="js/app/views/bj.views.min.js"></script> -->
+	<script src="js/app/views/bj.app-comp.js"></script>
+	<script src="js/app/views/bj.game-comps.js"></script>
+	<script src="js/app/views/bj.screen-comps.js"></script>
+	<script src="js/app/views/bj.scoreboard-comps.js"></script>
+	
+	<!-- <script src="js/app/ctrls/bj.ctrls.min.js"></script> -->
+	<script src="js/app/ctrls/bj.game-comps-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.screen-comps-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.scoreboard-comps-ctrl.js"></script>
+	
+	<script src="js/app/ctrls/bj.game-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.game-start-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.game-play-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.game-finish-ctrl.js"></script>
+	<script src="js/app/ctrls/bj.table-ctrl.js"></script>
+	
+</head>
+
+<body>
+
+	<div id="app-comp" class="no-select"></div>
+
+	<!-- instantiate and run the App class -->
+	<script src="js/app/bj.boot.js"></script>
+
+</body>
+
+</html>
+

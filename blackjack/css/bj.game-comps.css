@@ -1,0 +1,232 @@
+/******************************************************************************
+
+    bj.game-comps.css
+    Andy Knoll
+    December 2018
+
+******************************************************************************/
+
+
+#table-comp {
+  position: absolute;
+  top: 0px;
+  height: 600px;
+  width : 1200px;
+  background-image: url("../assets/img/table-2-1200x680.jpg");
+}
+
+#bj-logo {
+  position: absolute;
+  top: 240px;
+  left: 500px;
+  height: 150px;
+  width : 200px;
+  background-image: url("../assets/img/logo-4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+
+}
+
+.player-comp-big {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  height: 500px;
+  width : 800px;
+  border: 1px solid white;
+}
+
+
+
+
+#dealer   { top:  10px; left: 410px; }
+#player-0 { top: 190px; left: 810px; }
+#player-1 { top: 340px; left: 410px; }
+#player-2 { top: 190px; left:  10px; }
+
+
+.player-comp {
+  position: absolute;
+  height: 200px;
+  width : 380px;
+  /*
+  border-left: 0px;
+  border-right: 0px;
+  */
+  border: 2px solid #004400;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .1);
+  overflow: hidden;
+}
+
+/* current player */
+.player-current { 
+  border: 2px solid gold; 
+  background-color: #004400;
+}
+
+.player-busted  { 
+  border: 2px solid red;  
+  background-color: #660000;
+}
+
+.player-comp-name {
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  height: 25px;
+  width : 380px;
+  color: gold;
+  font-weight: normal;
+  text-align: center;
+  border: 0px solid white;
+}
+
+.player-comp-cash {
+  position: absolute;
+  top: 175px;
+  left: 200px;
+  height: 25px;
+  width : 175px;
+  text-align: right;
+  border: 0px solid gold;
+}
+
+.player-comp-chips {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 200px;
+  width : 100px;
+  border: 0px solid red;
+}
+
+.player-comp-chips-ante {
+  position: absolute;
+  top: 175px;
+  left: -5px;
+  height: 25px;
+  width : 100px;
+  text-align: center;
+  border: 0px solid gold;
+}
+
+.player-comp-chip {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  height: 100px;
+  width : 100px;
+  background-image: url("../assets/img/chip-100.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0px solid red;
+}
+
+.player-comp-cards {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 175px;
+  width : 280px;
+  border: 0px solid gold;
+}
+
+
+.dealer-comp-name {
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  height: 25px;
+  width : 380px;
+  color: gold;
+  font-weight: normal;
+  text-align: center;
+  border: 0px solid white;
+}
+
+.dealer-comp-cards {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 175px;
+  width : 360px;
+  border: 0px solid gold;
+}
+
+
+
+/* these will be filled by CardMaker */
+.card-comp {
+  position: absolute;
+  width : 110px;
+  height: 160px;
+  background-image: url("../assets/img/_back-red.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player-card {
+  top: 10px;
+  left: 0px;
+  background-image: url("../assets/img/AH.png");
+}
+
+.player-card1 {
+  top: 10px;
+  left: 0px;
+  background-image: url("../assets/img/KH.png");
+}
+
+.player-card2 {
+  top: 10px;
+  left: 40px;
+  background-image: url("../assets/img/QH.png");
+}
+
+.player-card3 {
+  top: 10px;
+  left: 80px;
+  background-image: url("../assets/img/JH.png");
+}
+
+
+.dealer-card1 {
+  top: 10px;
+  left: 0px;
+  background-image: url("../assets/img/_back-red.png");
+}
+
+.dealer-card2 {
+  top: 10px;
+  left: 125px;
+  background-image: url("../assets/img/AS.png");
+}
+
+
+
+
+#deck-comp {
+  position: absolute;
+  top: 20px;
+  left: 1075px;
+}
+
+.deck-card {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width : 110px;
+  height: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+#pile-comp {
+  top: 20px;
+  left: 20px;
+}
+
+

@@ -1,0 +1,67 @@
+/******************************************************************************
+
+    bj.scoreboard-comps.css
+    Andy Knoll
+    December 2018
+
+******************************************************************************/
+
+/* scoreboard-comp will have unique sections */
+/*
+  .title
+  .player
+  .status   // PLAYING, HITTING, etc.
+*/
+
+#scoreboard-comp {
+  position: absolute;
+  top: 0px;
+  height: 100px;
+  width : 1200px;
+  background-color: #004400;
+  background-image: url("../assets/img/skyline-2-1200x100.jpg");
+}
+
+.scoreboard-logo {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  height : 60px;
+  width : 140px;
+  border: 0px solid green;
+  background-image: url("../assets/img/logo-4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.scoreboard-message {
+  position: absolute;
+  top: 25px;
+  left: 200px;
+  width : 800px;
+  text-align: center;
+  font-family: "Nunito";  /* or Paprika */
+  font-size: 2rem;
+  font-style: normal;
+  color: gold;
+  border: 0px solid gold;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.sboard-field {
+  position: absolute;
+  left: 1000px;
+  height: 25px;
+  width : 180px;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+  border: 0px solid gold;
+}
+
+.sboard-status { top: 10px; }
+.sboard-cash   { top: 40px; }
+.sboard-ante   { top: 70px; }
+
