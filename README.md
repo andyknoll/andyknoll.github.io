@@ -12,6 +12,3 @@
 ## Blackjack
 [Blackjack](blackjack)
 
-
-
-
