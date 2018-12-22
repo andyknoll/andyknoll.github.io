@@ -9,5 +9,9 @@
 ## Blackjack 1984
 [Blackjack 1984](blackjack-sim-web)
 
+## Blackjack
+[Blackjack](blackjack)
+
+
 
 
