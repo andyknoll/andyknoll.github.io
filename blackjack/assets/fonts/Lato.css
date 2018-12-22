@@ -1,0 +1,39 @@
+/* 
+	Lato-Fonts.css - from Google fonts
+	Andy Knoll 
+	07-19-2014
+	
+	local fonts now with shorter .woff names
+*/
+
+@font-face {
+  font-family: 'Lato Hairline';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url('Lato-Hairline-100.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url('Lato-Light-300.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url('Lato-Regular-400.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url('Lato-Bold-700.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url('Lato-Black-900.woff') format('woff');
+}
+
