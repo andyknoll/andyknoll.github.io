@@ -100,22 +100,6 @@ bj.Game.pauseThenCall = function(msecs, caller, func) {
 };
 
 
-// ??? still using these?
-bj.Game.STOPPED = "STOPPED";
-bj.Game.STARTED = "STARTED";
-bj.Game.DEALING = "DEALING";
-/*
-SHUFFLING
-BETTING
-DEALING
-PLAYING
-SCORING
-RECONCILING
-COMPLETING
-*/
-
-
-
 
 // PUBLIC API
 
@@ -145,87 +129,73 @@ bj.Game.prototype.dealCardToCurrPlayer = function() {
 
 
 
+// called by gameStartCtrl
 
-
-// called once
-bj.Game.prototype.initGame = function(ctrl, callback) {
+// 1
+bj.Game.prototype.initGame = function() {
     this.msg = "Game.initGame";
     if (!this.setFirstPlayer()) return false;
-    bj.Game.pauseThenCall(1000, ctrl, callback);
     return true;
 };
 
 // called once
-bj.Game.prototype.initRounds = function(ctrl, callback) {
+bj.Game.prototype.initRounds = function() {
     this.msg = "Game.initRounds";
     this.setFirstPlayer();
-    bj.Game.pauseThenCall(1000, ctrl, callback);
 };
 
 // called once
-bj.Game.prototype.playRounds = function(ctrl, callback) {
+bj.Game.prototype.playRounds = function() {
     this.msg = "Game.playRounds";
     this.setFirstPlayer();
-    bj.Game.pauseThenCall(1000, ctrl, callback);
 };
 
 // called once per round
-bj.Game.prototype.initRound = function(ctrl, callback) {
+bj.Game.prototype.initRound = function() {
     this.msg = "Game.initRound";
     this.setFirstPlayer();
-    bj.Game.pauseThenCall(1000, ctrl, callback);
 };
 
-// called once per round
-bj.Game.prototype.shuffleDeck = function(ctrl, callback) {
-    this.msg = "Game.shuffleDeck";
-    this.multiDeck.shuffle();
-    bj.Game.pauseThenCall(2000, ctrl, callback);
-};
-
-bj.Game.prototype.playRound = function(ctrl, callback) {
+// 5
+bj.Game.prototype.playRound = function() {
     this.msg = "Game.playRound";
     //this.getNextPlayer(); // not yet...
-    bj.Game.pauseThenCall(2000, ctrl, callback);
 };
 
-// STOPPING HERE FOR NOW...
-
-// TO DO:
-// placeAntes()
-// dealFirstCards()
-// playPlayersHands()
-// scorePlayersHands()
-// reconcileBets()
-// completeRound()
-
-
+bj.Game.prototype.shuffleDeck = function() {
+    this.msg = "Game.shuffleDeck";
+    this.multiDeck.shuffle();
+};
 
 // this must "loop" in the controller
-bj.Game.prototype.placeBets = function() {
-    this.msg = "Game.placeBets";
+bj.Game.prototype.placeAntes = function() {
+    this.msg = "Game.placeAntes";
     this.setFirstPlayer();
 };
 
-bj.Game.prototype.placeBet = function() {
-    this.msg = "Game.placeBet";
+// 8
+bj.Game.prototype.placeAnte = function() {
+    this.msg = "Game.placeAnte";
 };
 
-bj.Game.prototype.placeRandomAnte = function(game) {
+bj.Game.prototype.placeRandomAnte = function() {
     this.msg = "Game.placeRandomAnte";
     this.currPlayer().placeRandomAnte();
 };
 
-bj.Game.prototype.addChipToAnte = function(game) {
+bj.Game.prototype.addChipToAnte = function() {
     this.msg = "Game.addChipToAnte";
     this.currPlayer().addChipToAnte();
 };
 
-bj.Game.prototype.removeChipFromAnte = function(game) {
+bj.Game.prototype.removeChipFromAnte = function() {
     this.msg = "Game.removeChipFromAnte";
     this.currPlayer().removeChipFromAnte();
 };
 
+
+
+// called by gamePlayCtrl
 
 // this must "loop" in the controller
 bj.Game.prototype.dealFirstCards = function() {
@@ -233,19 +203,12 @@ bj.Game.prototype.dealFirstCards = function() {
     this.setFirstPlayer();
 };
 
-bj.Game.prototype.dealPlayerFirstCards = function() {
-    this.msg = "Game.dealPlayerFirstCards";
-    this.dealCardToCurrPlayer();
+bj.Game.prototype.dealCardTo = function() {
+    this.msg = "Game.dealCardTo";
 };
 
-
-
-
-
-// this must "loop" in the controller
 bj.Game.prototype.playPlayersHands = function() {
     this.msg = "Game.playPlayersHands";
-    this.setFirstPlayer();
 };
 
 bj.Game.prototype.playPlayerHand = function() {
@@ -265,6 +228,8 @@ bj.Game.prototype.playerStay = function() {
 
 
 
+// called by gameFinishCtrl
+
 bj.Game.prototype.scorePlayersHands = function() {
     this.msg = "Game.scorePlayersHands";
     this.setFirstPlayer();
@@ -274,19 +239,22 @@ bj.Game.prototype.scorePlayerHand = function() {
     this.msg = "Game.scorePlayerHand";
 };
 
-
-
-
-
-/*
-bj.Game.prototype.scoreDealerHand = function() {
-    this.msg = "Game.scoreDealerHand";
-};
-*/
-
-bj.Game.prototype.reconcileBets = function() {
-    this.msg = "Game.reconcileBets";
+bj.Game.prototype.reconcilePlayersAntes = function() {
+    this.msg = "Game.reconcilePlayersAntes";
     this.setFirstPlayer();
+};
+
+bj.Game.prototype.reconcilePlayerAnte = function() {
+    this.msg = "Game.reconcilePlayerAnte";
+};
+
+bj.Game.prototype.returnPlayersCards = function() {
+    this.msg = "Game.returnPlayersCards";
+    this.setFirstPlayer();
+};
+
+bj.Game.prototype.returnPlayerCards = function() {
+    this.msg = "Game.returnPlayerCards";
 };
 
 bj.Game.prototype.completeRound = function() {

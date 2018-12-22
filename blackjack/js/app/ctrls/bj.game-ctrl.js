@@ -15,19 +15,14 @@
 	The basic pattern is that this (or the other) controllers make calls
 	to the Game and View APIs simultaneously thus keeping them in sync.
 
-	The are setTimeout delays on the Game methods to simulate real time.
+	The are setTimeout delays on these methods to simulate real time.
 
-	The Game is passed this controller and a callback after the delay.
-	The View is passed the updated game object to update the screen.
+	The Game methods are called and then the View (component) is passed 
+	the updated game object to update the screen.
 
-	View animations now run independently and the Model is "throttled back"
-	so no events are required from the View to notify completion.
+	View animations now run independently and calls are "throttled back"
+	so no events are required to be sent from the View to notify completion.
 
-	startRound = function() {
-		game.startRound(this, callback);
-		view.startRound(game);
-	}
-    
 ******************************************************************************/
 
 // bj.GameCtrl class
@@ -41,13 +36,16 @@ bj.GameCtrl.prototype.constructor = bj.GameCtrl;
 // convenience getters
 bj.GameCtrl.prototype.appGame = function() { return this.models().appGame; };	// "models"
 bj.GameCtrl.prototype.appComp = function() { return this.views().appComp; };	// "views"
-
-// use these to access others models and views
-bj.GameCtrl.prototype.scoreBoardCtrl = function() { return this.parent().scoreBoardCtrl; };
+bj.GameCtrl.prototype.screensComp = function() { return this.appComp().screensComp; };
 bj.GameCtrl.prototype.scoreBoardComp = function() { return this.appComp().scoreBoardComp; };
 
-bj.GameCtrl.prototype.screenCompsCtrl = function() { return this.parent().screenCompsCtrl; };
-bj.GameCtrl.prototype.screensComp = function() { return this.appComp().screensComp; };
+bj.GameCtrl.prototype.gameStartCtrl  = function() { return this.parent().gameStartCtrl; };
+bj.GameCtrl.prototype.gamePlayCtrl   = function() { return this.parent().gamePlayCtrl; };
+bj.GameCtrl.prototype.gameFinishCtrl = function() { return this.parent().gameFinishCtrl; };
+
+/***
+// use these to access others models and views
+bj.GameCtrl.prototype.scoreBoardCtrl = function() { return this.parent().scoreBoardCtrl; };
 
 // remember that for now the "screens" are holding single components - will change that soon
 // we are accessing these via the Controllers - should just use direct access!
@@ -60,7 +58,7 @@ bj.GameCtrl.prototype.tableComp = function() { return this.tableScreenComp().tab
 bj.GameCtrl.prototype.anteComp  = function() { return this.anteScreenComp().anteComp;   };
 bj.GameCtrl.prototype.playComp  = function() { return this.playScreenComp().playComp;   };
 bj.GameCtrl.prototype.debugComp = function() { return this.debugScreenComp().debugComp; };
-
+***/
 
 // PUBLIC API
 
@@ -91,116 +89,57 @@ bj.GameCtrl.prototype.getNextPlayer = function() {
 	return this.appGame().getNextPlayer(); 
 };
 
+// utility method
+bj.GameCtrl.prototype.pauseThenCall = function(msecs, method) {
+	var self = this;
+    setTimeout(() => { method.call(self); }, msecs);  // keep in context
+};
+
+
+// SWITCH TO GAME-START CONTROLLER HERE
 
 // called by clicking tableComp.buttonPlay
 bj.GameCtrl.prototype.startGame = function() { 
 	this.showMessage("Starting Blackjack game");
-	this.initGame();
+	//this.initGame();
+	this.gameStartCtrl().initGame();
 };
 
-// use multiple controllers to keep file sizes down?
-// this.gameStartCtrl.run();
-// this.gamePlayCtrl.run();
-// this.gameFinishCtrl.run();
-
-
-// GAME MODEL METHODS CALLED BY THE GAME CONTROLLER
-// this is what controls the game "flow" and timing
-
-
-
-
-// SWITCH TO GAME-START CONTROLLER HERE ?
-
-// 1
-bj.GameCtrl.prototype.initGame = function() { 
-	//this.showMessage("GameCtrl Initialize game");
-	if (this.appGame().initGame(this, this.initGameCompleted)) {
-		//this.tableComp().initGame(this.appGame());
-		this.appComp().initGame(this.appGame());	// should use appComp!
-	} else {
-		// error
-	}
-};
-
-// callback when Game.initGame() is completed
-bj.GameCtrl.prototype.initGameCompleted = function() { 
-	this.showMessage("GameCtrl Initialize game completed");
-	this.initRounds();		// call next step
-};
-
-// 2
-bj.GameCtrl.prototype.initRounds = function() { 
-	this.appGame().initRounds(this, this.initRoundsCompleted);
-	this.tableComp().initRounds(this.appGame());
-};
-
-bj.GameCtrl.prototype.initRoundsCompleted = function() { 
-	this.showMessage("GameCtrl Initialize rounds completed");
-	this.playRounds();		// call next step
-};
-
-// 3
-bj.GameCtrl.prototype.playRounds = function() { 
-	this.appGame().playRounds(this, this.playRoundsCompleted);
-	this.tableComp().playRounds(this.appGame());
-};
-
-bj.GameCtrl.prototype.playRoundsCompleted = function() { 
-	this.showMessage("GameCtrl Play rounds completed");
-	this.initRound();		// call next step
-};
-
-// 4
-bj.GameCtrl.prototype.initRound = function() { 
-	this.appGame().initRound(this, this.initRoundCompleted);
-	this.tableComp().initRound(this.appGame());
-};
-
-bj.GameCtrl.prototype.initRoundCompleted = function() { 
-	this.showMessage("GameCtrl Init round completed");
-	this.shuffleDeck();		// call next step
-};
-
-
-// SWITCH TO GAME-PLAY CONTROLLER HERE ?
-
-// 5
-bj.GameCtrl.prototype.shuffleDeck = function() { 
-	this.appGame().shuffleDeck(this, this.shuffleDeckCompleted);
-	this.tableComp().shuffleDeck(this.appGame());
-};
-
-bj.GameCtrl.prototype.shuffleDeckCompleted = function() { 
-	this.showMessage("GameCtrl shuffle Deck completed");
-		this.playRound();		// call next step
-};
-
-
-// 6
-bj.GameCtrl.prototype.playRound = function() { 
-	this.appGame().playRound(this, this.playRoundCompleted);
-	this.tableComp().playRound(this.appGame());
-};
-
-bj.GameCtrl.prototype.playRoundCompleted = function() { 
-	this.showMessage("GameCtrl Play round completed");
-	if (this.currPlayerIsDealer()) {
-		this.stop();			// call next step after Dealer
-	} else {
-		this.getNextPlayer();
-		this.playRound();		// stay in "loop" 4 times
-	}
-};
-
-
-bj.GameCtrl.prototype.stop = function() { 
-	this.showMessage("Round Completed.");
-	this.tableComp().clearCurrPlayer();
+bj.GameCtrl.prototype.startGameCompleted = function() { 
+	this.playGame();
 };
 
 
 
+// SWITCH TO GAME-PLAY CONTROLLER HERE
+
+// called by GameStartCtrl.placeAnteCompleted
+bj.GameCtrl.prototype.playGame = function() { 
+	this.showMessage("Playing Blackjack game.");
+	this.gamePlayCtrl().dealFirstCards();
+};
+
+bj.GameCtrl.prototype.playGameCompleted = function() { 
+	this.finishGame();
+};
 
 
-// SWITCH TO GAME-FINISH CONTROLLER HERE ?
+
+// SWITCH TO GAME-FINISH CONTROLLER HERE
+
+// called by GameStartCtrl.placeAnteCompleted
+bj.GameCtrl.prototype.finishGame = function() { 
+	this.showMessage("Finishing Blackjack game.");
+	this.gameFinishCtrl().initGame();
+};
+
+bj.GameCtrl.prototype.playGameCompleted = function() { 
+	this.playNextRound();
+};
+
+
+bj.GameCtrl.prototype.playNextRound = function() { 
+	this.showMessage("Game over - play another round?");
+	// stop
+};
+

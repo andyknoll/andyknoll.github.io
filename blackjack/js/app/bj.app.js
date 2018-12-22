@@ -91,8 +91,11 @@ bj.Controllers = function(name, parent) {
     wood.Controllers.call(this, name, parent);
     this._className = "bj.Controllers";
     // add the various Blackjack controllers - not a tree structure
-	//this.addController(new bj.AppCtrl("appCtrl", this));      // needed?
 	this.addController(new bj.GameCtrl("gameCtrl", this));
+	this.addController(new bj.GameStartCtrl("gameStartCtrl", this));
+	this.addController(new bj.GamePlayCtrl("gamePlayCtrl", this));
+    this.addController(new bj.GameFinishCtrl("gameFinishCtrl", this));
+    
 	this.addController(new bj.GameCompsCtrl("gameCompsCtrl", this));
 	this.addController(new bj.ScreenCompsCtrl("screenCompsCtrl", this));
 	this.addController(new bj.ScoreBoardCompsCtrl("scoreBoardCtrl", this));
