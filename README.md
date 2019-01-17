@@ -1,4 +1,4 @@
-# Andy's Front-End Projects
+# Andy's Front-End Developer Projects
 
 ## Rocco Restaurant Project
 [Rocco](rocco)
