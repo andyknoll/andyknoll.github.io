@@ -6,12 +6,12 @@
 ## Quick Picker Game
 [Quick Picker](quick-picker)
 
-## Blackjack 1984
-[Blackjack 1984](blackjack-sim-web)
-
-## Blackjack
-[Blackjack](blackjack)
-
 ## Angular Routing Demo
 [Angular Routing Demo](angular-routing-demo)
+
+## Blackjack Web Game
+[Blackjack](blackjack)
+
+## Blackjack 1984
+[Blackjack 1984](blackjack-sim-web)
 
