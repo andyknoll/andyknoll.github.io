@@ -12,3 +12,6 @@
 ## Blackjack
 [Blackjack](blackjack)
 
+## Angular Routing Demo
+[Angular Routing Demo](angular-routing-demo)
+
